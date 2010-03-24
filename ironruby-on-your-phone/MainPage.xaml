@@ -1,0 +1,33 @@
+﻿<phoneNavigation:PhoneApplicationPage 
+    x:Class="PhoneScripter.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phoneNavigation="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Navigation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}">
+
+    <Grid x:Name="LayoutRoot" Background="{StaticResource PhoneBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitleGrid is the name of the application and page title-->
+        <Grid x:Name="TitleGrid" Grid.Row="0">
+            <TextBlock Text="IronRuby on Phone" x:Name="textBlockPageTitle" Style="{StaticResource PhoneTextPageTitle1Style}"/>
+        </Grid>
+
+        <!--ContentGrid is empty. Place new content here-->
+        <Grid x:Name="ContentGrid" Grid.Row="1">
+            <Button Content="Run" Height="51" HorizontalAlignment="Left" Margin="292,6,0,0" Name="Run" VerticalAlignment="Top" Width="173" Click="Run_Click" />
+            <TextBox Height="254" HorizontalAlignment="Left" Margin="20,72,0,0" Name="Input" Text="" VerticalAlignment="Top" Width="444" AcceptsReturn="True" FontFamily="Courier New" FontSize="15" />
+            <TextBox AcceptsReturn="True" Height="347" HorizontalAlignment="Left" Margin="20,319,0,0" Name="Output" Text="" VerticalAlignment="Top" Width="444" FontFamily="Courier New" FontSize="15" IsEnabled="True" />
+            <Button Content="Clear" Height="51" HorizontalAlignment="Left" Margin="291,662,0,0" Name="ClearOutput" VerticalAlignment="Top" Width="173" Click="ClearOutput_Click" />
+        </Grid>
+    </Grid>
+    
+</phoneNavigation:PhoneApplicationPage>
